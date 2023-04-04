@@ -1,0 +1,32 @@
+.add__button {
+    background-color: gray;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 7px;
+}
+
+.add__button:hover{
+    background-color: rgb(75, 74, 74);
+}
+
+label {
+    margin-left: 7px;
+    font-family: Arial;
+}
+
+input {
+    border-style: solid;
+    border-color: black;
+    border-width: 1.5px;
+    margin-left: 5px;
+}
+
+input:focus {
+    background-color: gray;
+}
+
+.add__manager__form {
+    margin-bottom: 15px;
+}

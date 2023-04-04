@@ -1,0 +1,45 @@
+.managers__table {
+    text-align: center;
+    color: white;
+    margin-left: 5px;
+}
+
+.managers__table__header {
+    background-color: rgb(75, 74, 74);
+}
+
+.managers__table__body {
+    background-color: gray;
+}
+
+td, th{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+tr:hover {
+    background-color: rgb(75, 74, 74);
+}
+
+tr button {
+    background-color: transparent;
+}
+
+.filter__button, .sort__button, .update__button2 {
+    background-color: gray;
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    margin-left: 7px;
+}
+
+    .filter__button:hover, .sort__button:hover, .update__button2:hover {
+        background-color: rgb(75, 74, 74);
+    }
+
+.update__button, .delete__button {
+    color: white;
+    border: none;
+}

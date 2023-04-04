@@ -1,0 +1,30 @@
+nav {
+    background-color: gray;
+    height: 30px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    left: 0px;
+    height: 30px;
+    width: 100px;
+    display: inline;
+    float: left;
+    text-align: center;
+}
+
+li:hover {
+    background-color: rgb(75, 74, 74);
+}
+
+a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}

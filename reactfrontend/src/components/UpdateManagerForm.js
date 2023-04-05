@@ -9,7 +9,7 @@ function UpdateManagerForm(props) {
     const [yearsExp, setYearsExp] = useState('');
 
     useEffect(() => {
-        axios.get(`https://localhost:7075/api/Manager/${props.managerId}`).then((response) => {
+        axios.get(`http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager/${props.managerId}`).then((response) => {
             setFirstName(response.data.manager.FirstName);
             setLastName(response.data.manager.LastName);
             setLocation(response.data.manager.Location);

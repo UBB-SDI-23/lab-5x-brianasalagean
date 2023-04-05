@@ -12,13 +12,7 @@ export default function AddManagerForm(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         const newManager = { firstName, lastName, location, age, yearsExp };
-        axios.post('https://localhost:7075/api/Manager', newManager)
-            .then((response) => {
-                props.onAddManager(response.data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
+        props.onAddManager(newManager);
     };
 
     return (

@@ -12,7 +12,7 @@ export default function ManagersList() {
     const [selectedManager, setSelectedManager] = useState(null);
 
     useEffect(() => {
-        axios.get('https://localhost:7075/api/Manager')
+        axios.get('http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager')
             .then(response => setManagers(response.data));
     }, []);
 
@@ -21,7 +21,7 @@ export default function ManagersList() {
     };
 
     const addManager = (manager) => {
-        axios.post('https://localhost:7075/api/Manager', manager)
+        axios.post('http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager', manager)
             .then(response => setManagers(response.data))
             .catch(error => {
                 console.log(error);
@@ -29,7 +29,7 @@ export default function ManagersList() {
     };
 
     const handleFilterByYearsExp = () => {
-        axios.get(`https://localhost:7075/api/Manager/YearsExp/${yearsExp}`)
+        axios.get(`http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager/YearsExp/${yearsExp}`)
             .then(response => setManagers(response.data));
     };
 
@@ -39,7 +39,7 @@ export default function ManagersList() {
     };
 
     const handleDeleteClick = (managerId) => {
-        axios.delete(`https://localhost:7075/api/Manager/${managerId}`)
+        axios.delete(`http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager/${managerId}`)
             .then(() => {
                 const updatedManagers = managers.filter(manager => manager.id !== managerId);
                 setManagers(updatedManagers);
@@ -47,7 +47,7 @@ export default function ManagersList() {
     };
 
     const handleUpdateManager = (updatedManager) => {
-        axios.put(`https://localhost:7075/api/Manager/${selectedManager}`, updatedManager)
+        axios.put(`http://ec2-13-50-252-46.eu-north-1.compute.amazonaws.com/api/Manager/${selectedManager}`, updatedManager)
             .then(response => {
                 setManagers(response.data);
                 setShowUpdateForm(false);
